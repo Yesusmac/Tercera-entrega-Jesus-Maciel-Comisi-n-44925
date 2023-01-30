@@ -94,9 +94,11 @@ function finalizarCompra() {
   renderizarCarrito(carrito);
 }
 
-function filtrar() {
+function filtrar(e) {
+  e.preventDefault();
   let productosFiltrados;
   if (buscador.value) {
+    console.log(productos);
     productosFiltrados = productos.filter(
       (producto) =>
         producto.nombre.toLowerCase().includes(buscador.value.toLowerCase()) ||
