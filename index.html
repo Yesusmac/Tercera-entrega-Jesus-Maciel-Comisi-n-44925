@@ -9,7 +9,7 @@
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <!-- mi css -->
     <link rel="stylesheet" href="./style.css">
-    <link rel="shortcut icon" href="../imagenes/logo/logo1.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="./imagenes/logo/logo1.jpg" type="image/x-icon">
     <!-- Keywords -->
     <meta name="keywords" content="sensuality, indumentaria femenina, arneses, collares, cadenas, productos">
     <!-- Description -->
@@ -26,52 +26,58 @@
         <nav class="navbar navbar-expand-lg" style="background-color: #ffc0cb;">
             <div class="container-fluid">
                 <a class="navbar-brand" href="../index.html">
-                    <img src="../imagenes/logo/logo.jpg" alt="logo_sensuality"></a>
+                    <img width="140" height="80" src="./imagenes/logo/logo.jpg" alt="logo_sensuality">
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./index.html ">Productos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Información</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Galeria</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Crear cuenta</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Búsqueda" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Búsqueda</button>
-                    </form>
+                    <div class="w-75">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./index.html ">Productos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Información</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Galeria</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Crear cuenta</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="w-75 d-flex justify-content-end align-items-center">
+                        <button id="ver-carrito">
+                            Ver carrito
+                        </button>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
     <main>
-        <h1 class="tit-h1">NUESTROS PRODUCTOS</h1>
-        <input id="buscador" placeholder="nombre o categoria">
-        <input id="min" placeholder="precio minimo">
-        <input id="max" placeholder="precio maximo">
-        <button id="buscar">BUSCAR</button>
-        <input type="checkbox" class="inputFiltro" id="arneses">ARNESES</button>
-        <input type="checkbox" class="inputFiltro" id="cadenas">CADENAS</button>
-
-        <button id="verCarrito">CARRITO</button>
-
-        <div id="contenedorProductos"></div>
-        <div id="contenedorCarrito" class="ocultar">
+        <div id="titulo-pagina">
+            <h1>Nuestros productos</h1>
         </div>
+        <div id="contenedor-filtros-productos">
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Búsqueda" aria-label="Search">
+                <button id="buscar" class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+            <input type="checkbox" class="inputFiltro" id="arneses" />
+            <label class="filtro-checkbox-label" for="arneses">Arneses</label>
+            <input type="checkbox" class="inputFiltro" id="cadenas" />
+            <label class="filtro-checkbox-label" for="arneses">Cadenas</label>
+        </div>
+        <div id="contenedor-productos"></div>
+        <div id="contenedor-carrito-de-compra" class="ocultar"></div>
     </main>
 
     <!-- Footers -->
@@ -90,41 +96,41 @@
                     <h3>Redes Sociales</h3>
                     <div class="rowFooter">
                         <a id="enlace_absoluto" href="https://es-la.facebook.com/" target="blank">
-                            <img src="../imagenes/iconos/icons8-facebook-nuevo-30.png" alt="Facebook"></a>
+                            <img src="./imagenes/iconos/icons8-facebook-nuevo-30.png" alt="Facebook"></a>
                         <label>Seguinos en Facebook</label>
                     </div>
                     <div class="rowFooter">
                         <a id="enlace_absoluto" href="https://www.instagram.com/" target="blank">
-                            <img src="../imagenes/iconos/icons8-instagram-30.png" alt="Instagram"></a>
+                            <img src="./imagenes/iconos/icons8-instagram-30.png" alt="Instagram"></a>
                         <label>Seguinos en Instagram</label>
                     </div>
                     <div class="rowFooter">
                         <a id="enlace_absoluto" href="https://twitter.com/" target="blank">
-                            <img src="../imagenes/iconos/icons8-twitter-circled-30.png" alt="Twitter"></a>
+                            <img src="./imagenes/iconos/icons8-twitter-circled-30.png" alt="Twitter"></a>
                         <label>Seguinos en Twitter</label>
                     </div>
                     <div class="rowFooter">
                         <a id="enlace_absoluto" href="https://ar.pinterest.com/" target="blank">
-                            <img src="../imagenes/iconos/icons8-pinterest-30.png" alt="Pinterest"></a>
+                            <img src="./imagenes/iconos/icons8-pinterest-30.png" alt="Pinterest"></a>
                         <label>Seguinos en Pinterest</label>
                     </div>
                 </div>
                 <div class="column3">
                     <h3>Contactos</h3>
                     <div class="rowFooter2">
-                        <img src="../imagenes/iconos/icons8-casa-30.png" alt="Ubicación">
+                        <img src="./imagenes/iconos/icons8-casa-30.png" alt="Ubicación">
                         <label>Congreso,
                             Ciudad de Buenos Aires
                             Av. 9 de julio 123
                         </label>
                     </div>
                     <div class="rowFooter2">
-                        <img src="../imagenes/iconos/icons8-whatsapp-30.png" alt="Teléfono">
+                        <img src="./imagenes/iconos/icons8-whatsapp-30.png" alt="Teléfono">
                         <label>+54-11-123-4560
                         </label>
                     </div>
                     <div class="rowFooter2">
-                        <img src="../imagenes/iconos/icons8-gmail-30.png" alt="emial">
+                        <img src="./imagenes/iconos/icons8-gmail-30.png" alt="emial">
                         <label>Sensuality@gmail.com
                         </label>
                     </div>

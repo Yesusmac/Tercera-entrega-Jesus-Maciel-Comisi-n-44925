@@ -18,41 +18,49 @@ main {
     font-size: 3rem;
 }
 
-#contenedorProductos {
+
+#contenedor-productos {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     background: rgba(249, 232, 237, 0.877);
     margin: 20px;
     overflow: hidden;
 }
 
-.producto {
-    margin: 2px;
-    height: 350px;
-    width: 350px;
+#contenedor-filtros-productos {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-.pocoStock {
-    background-color: rgb(62, 103, 198);
+#contenedor-filtros-productos form {
+    margin-left: 80px;
 }
 
-.producto img {
-    width: 50%;
-    padding: 10px;
-    background: #eee;
-    text-align: center;
-    object-fit: cover;
-    border: 2px solid black;
-
+#ver-carrito {
+    width: 100px;
+    height: 50px;
+    background-color: transparent;
+    margin-right: 50px;
+    border-radius: 3px;
 }
 
-#contenedorCarrito {
+
+#ver-carrito img {
+    width: 100%;
+    height: 100%;
+}
+
+
+#contenedor-carrito-de-compra {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     background: whitesmoke;
     margin: 20px;
     overflow: hidden;
@@ -75,6 +83,80 @@ main {
 
 .ocultar {
     display: none !important;
+}
+
+#arneses,
+#cadenas {
+    margin-left: 20px;
+}
+
+.filtro-checkbox-label {
+    margin-left: 5px;
+}
+
+#titulo-pagina {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.producto {
+    height: 350px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+    margin-top: 30px;
+    margin-left: 60px;
+    border-radius: 10px;
+}
+
+.producto-imagen {
+    width: 100%;
+    height: 80%;
+}
+
+.producto-imagen img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.contenedor-producto-info {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+}
+
+.producto-info {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.producto-boton-agregar {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.producto-boton-agregar button {
+    width: 80px;
+    height: 30px;
+}
+
+.pocoStock {
+    background-color: rgb(62, 103, 198);
 }
 
 

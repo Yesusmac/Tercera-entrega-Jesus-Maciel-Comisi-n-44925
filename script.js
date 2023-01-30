@@ -71,16 +71,13 @@ if (localStorage.getItem("carrito")) {
   carrito = JSON.parse(carritoEnJSON);
 }
 
-let contenedorProductos = document.getElementById("contenedorProductos");
-let contenedorCarrito = document.getElementById("contenedorCarrito");
+let contenedorProductos = document.getElementById("contenedor-productos");
+let contenedorCarrito = document.getElementById("contenedor-carrito-de-compra");
 let buscador = document.getElementById("buscador");
 let buscar = document.getElementById("buscar");
 buscar.onclick = filtrar;
 
-let inputMin = document.getElementById("min");
-let inputMax = document.getElementById("max");
-
-let verCarrito = document.getElementById("verCarrito");
+let verCarrito = document.getElementById("ver-carrito");
 verCarrito.addEventListener("click", mostrarOcultarCarrito);
 
 function mostrarOcultarCarrito() {
@@ -105,12 +102,6 @@ function filtrar() {
         producto.nombre.toLowerCase().includes(buscador.value.toLowerCase()) ||
         producto.categoria.toLowerCase().includes(buscador.value.toLowerCase())
     );
-  } else if (inputMin.value && inputMax.value) {
-    productosFiltrados = productos.filter(
-      (producto) =>
-        producto.precio > Number(inputMin.value) &&
-        producto.precio < Number(inputMax.value)
-    );
   }
   renderizarProductos(productosFiltrados);
 }
@@ -123,17 +114,19 @@ function renderizarProductos(arrayDeProductos) {
     tarjetaProducto.id = `tarjeta${producto.id}`;
 
     tarjetaProducto.innerHTML = `
-      <h3>${producto.nombre}</h3>
-      <p>$${producto.precio}</p>
-      <img src=${producto.imgUrl} />
-      <button id=agregar${producto.id}>Agregar al carrito</button>
+      <div class='producto-imagen'>
+        <img src=${producto.imgUrl} />
+      </div>
+      <div class='contenedor-producto-info'>
+        <div class='producto-info'>
+          <span class='mt-2'>${producto.nombre}</span>
+          <span>$${producto.precio}</span>
+        </div>
+        <div class='producto-boton-agregar'>
+          <button id=agregar${producto.id}>Agregar</button>
+        <div>
+      </div>
     `;
-    if (producto.stock < 10) {
-      tarjetaProducto.classList.add("pocoStock");
-      let pocasUnidades = document.createElement("p");
-      pocasUnidades.innerText = "Quedan pocas unidades";
-      tarjetaProducto.appendChild(pocasUnidades);
-    }
 
     contenedorProductos.append(tarjetaProducto);
 
